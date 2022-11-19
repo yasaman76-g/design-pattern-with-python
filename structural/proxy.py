@@ -35,7 +35,7 @@ class EbookProxy(Ebook):
     
     def getFileName(self):
         return self.__file_name
-    
+#client   
 class Library:
     def __init__(self):
         self.__ebooks = dict()
