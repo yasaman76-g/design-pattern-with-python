@@ -6,7 +6,7 @@ class Command(ABC):
     @abstractmethod
     def execute(self):
         pass
-    
+#invoker   
 class Button:
     def __init__(self,command : Command):
         self.__command = command
@@ -17,9 +17,10 @@ class Button:
 #********************************************************************
 #these classes is part of custom application
 
+#reciever
 class CustomerService:
     def addCustomer(self):
-        print("add customers")
+        print("add customers to data base")
         
 class AddCustomerCommand(Command):
     def __init__(self,customerService : CustomerService):
