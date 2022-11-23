@@ -24,7 +24,9 @@ class BrushTool(Tool):
         print("draw a line")
 #********************************************************************       
 class Canvas(Tool):
-    tool: Tool
+    
+    def __init__(self):
+        self.tool: Tool
     
     def mouseDown(self):
         return self.tool.mouseDown()

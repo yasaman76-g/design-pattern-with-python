@@ -16,10 +16,7 @@ class Memento:
 
 #editor    
 class Originator:
-    __content = ''
-    __fontName = ''
-    __fontSize = ''
-    
+   
     def setContent(self,content):
         self.__content = content
     
@@ -48,9 +45,9 @@ class Originator:
 
 #history   
 class Caretaker:
-    __states = list()
     
     def pushState(self,memento:Memento):
+        self.__states = list()
         self.__states.append(memento)
         
     def popState(self):

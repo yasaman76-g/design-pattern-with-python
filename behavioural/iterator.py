@@ -32,9 +32,10 @@ class BrowseHistory:
         return self.ListIterator(self)
     
     class ListIterator(Iterator): 
-        __index = int()
+       
         def __init__(self,history):
             self.__history =history
+            self.__index = int()
             
         def hasNext(self):
             return (self.__index < len(self.__history.getUrls()))

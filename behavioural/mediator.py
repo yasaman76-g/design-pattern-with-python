@@ -6,7 +6,6 @@ class UIControl:
         self._owner = owner
 
 class ListBox(UIControl):
-    __selection = ''
     
     def __init__(self,owner):
         super().__init__(owner)
@@ -19,7 +18,6 @@ class ListBox(UIControl):
         return self.__selection
     
 class TextBox(UIControl):
-    __content = ''
     
     def __init__(self,owner):
         super().__init__(owner)
@@ -32,7 +30,6 @@ class TextBox(UIControl):
         return self.__content
     
 class Button(UIControl):
-    __is_enable = False
     
     def __init__(self,owner):
         super().__init__(owner)

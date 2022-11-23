@@ -25,9 +25,9 @@ class Chart(Observer):
 #********************************************************************
 #this class has methods need to talk with observer, that every classes need to talk with obsever should inheritance this classes.
 class Subject:
-    observers = list()
     
     def addObserver(self,observer:Observer):
+        self.observers = list()
         self.observers.append(observer)
     
     def removeObserver(self,observer:Observer):
@@ -40,8 +40,7 @@ class Subject:
 #primary class to talk with observer when it will changes
 
 class DataSource(Subject):
-    __value = int
-    
+        
     def setValue(self,value):
         self.__value = value
         self.notifyObservers()

@@ -14,7 +14,9 @@ class AnchorElement(Element):
         visitor.visit(self,self)
         
 class HtmlDocument():
-    __elements = list()
+    def __init__(self):
+        self.__elements = list()
+    
     def add(self,element:Element):
         self.__elements.append(element)
         
