@@ -13,9 +13,7 @@ class RemoteControl():
         self._device.turnOff()
 
 class AdvancedRemoteControl(RemoteControl):
-    def __init__(self,device:'Device'):
-        super().__init__(device)
-        
+   
     @abstractmethod
     def setChanel(self,number:int()):
         self._device.setChanel(number)
