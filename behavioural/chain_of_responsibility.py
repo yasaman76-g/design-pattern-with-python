@@ -28,9 +28,7 @@ class WebServer:
         self.__handler.handle(request)
     
 class Authenticator(Handler):
-    def __init__(self, next: Handler):
-        super().__init__(next)
-        
+    
     def doHandle(self, request: HttpRequest):
         print("authenticator")
         if request.username == 'admin' and request.password == '123456':
@@ -38,16 +36,12 @@ class Authenticator(Handler):
         return True
     
 class Compressor(Handler):
-    def __init__(self, next: Handler):
-        super().__init__(next)
         
     def doHandle(self, request: HttpRequest):
         print("Compressor")
         return False
     
 class Logger(Handler):
-    def __init__(self, next: Handler):
-        super().__init__(next)
         
     def doHandle(self, request: HttpRequest):
         print("logger")

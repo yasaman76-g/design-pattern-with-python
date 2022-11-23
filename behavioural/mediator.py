@@ -7,9 +7,6 @@ class UIControl:
 
 class ListBox(UIControl):
     
-    def __init__(self,owner):
-        super().__init__(owner)
-    
     def setSelection(self,selection):
         self.__selection = selection
         self._owner.changed(self)
@@ -19,9 +16,6 @@ class ListBox(UIControl):
     
 class TextBox(UIControl):
     
-    def __init__(self,owner):
-        super().__init__(owner)
-    
     def setContent(self,content):
         self.__content = content
         self._owner.changed(self)
@@ -30,9 +24,6 @@ class TextBox(UIControl):
         return self.__content
     
 class Button(UIControl):
-    
-    def __init__(self,owner):
-        super().__init__(owner)
     
     def setEnable(self,is_enable):
         self.__is_enable = is_enable

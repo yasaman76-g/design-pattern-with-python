@@ -18,9 +18,6 @@ class Task(ABC):
         pass
 
 class TransferMonyTask(Task):
-    def __init__(self,auditTrail : AuditTrail):
-        super().__init__(auditTrail)
-        
     def _doExecute(self):
         print("Transfer Mony")
         
