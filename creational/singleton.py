@@ -1,10 +1,10 @@
 class ConfigManger(object):
-    __settings = dict()
     __instance = None
     def __init__(self):
         raise RuntimeError('Call instance() instead')
     
     def setSetting(self,key,value):
+        self.__settings = dict()
         self.__settings[key] = value
         
     def getSetting(self):

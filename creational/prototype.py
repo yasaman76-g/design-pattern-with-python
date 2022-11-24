@@ -11,7 +11,6 @@ class Componet(ABC):
         pass
     
 class Circle(Componet):
-    __radius = ''
         
     def setRadius(self,radius):
         self.__radius = radius
